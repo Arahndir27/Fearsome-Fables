@@ -16,11 +16,6 @@ body {
     color: #fff;
 }
 
-.navbar-dark .navbar-nav .nav-link .active {
-    font-weight: bold;
-}
-
-
 .img {
     width: 100%;
     display: block;
@@ -42,4 +37,5 @@ body {
         margin-left: auto!important;
         margin-right: 0!important;
     }
+    
 }
