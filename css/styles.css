@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    margin: 0!important;
     padding: 0;
     box-sizing: border-box;
     height: 100%;
@@ -21,9 +21,6 @@ body {
     font-weight: bold;
 }
 
-.navbar-brand {
-    padding-left: 1em;
-}
 
 .img {
     width: 100%;
@@ -72,4 +69,20 @@ body {
 
 .content-wrapper {
     padding-bottom: 75px;
+}
+
+.page-title {
+    text-align: center;
+}
+
+@media (min-width: 48em) {
+    .main-photo img {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+    }
+    .navbar-nav {
+        margin-left: auto!important;
+        margin-right: 0!important;
+    }
 }
