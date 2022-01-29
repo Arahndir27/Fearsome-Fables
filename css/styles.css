@@ -23,3 +23,9 @@ body {
 .navbar-brand {
     padding-left: 1em;
 }
+
+.img {
+    width: 100%;
+    display: block;
+}
+
