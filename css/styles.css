@@ -73,6 +73,13 @@ body {
     bottom: 0 !important;
 }
 
+.footerItem {
+    color: #aaffaa;
+    font-size: larger;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
 .footer-span{
     font-size: 1.25em;
 }
