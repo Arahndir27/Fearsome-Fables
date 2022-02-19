@@ -142,7 +142,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     margin-bottom: 25px;
+    padding: 2.5em;
+}
+
+#game-form {
+    display: flexbox;
+}
+
+#game-results {
+    display: flexbox;
+    margin-top: 2.5em;
 }
 
 input[type=text] {
