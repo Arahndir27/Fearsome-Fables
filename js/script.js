@@ -4,11 +4,30 @@ document.getElementById("age-submit").addEventListener("click", function (event)
     event.preventDefault();
     //Get the name the user input
     const name = document.getElementById("age-input").value;
+    //console.log("Name: " + name);
     //Stop if they didn't input anything
     if (name === "") {
         return;
     }
-})
+
+    //Assuming the person is located in the US for more accurate data
+    const url = "https://api.agify.io?name=" + name + "&country_id=US";
+    //console.log("URL: " + url);
+    fetch(url)
+    .then(function (response) {
+        return response.json();
+    }).then(function (json) {
+        let result = "";
+        result += "<h3>" + json.name + "</h3>";
+        if (json.age != null) {
+            result += "<p>We guess that you are " + json.age + " years old!</p><p>How close were we?</p>";
+        }
+        else {
+            result += "<p>We don't have any information on your name. Do you have another one you can try?</p>";
+        }
+        document.getElementById("game-results").innerHTML = result;
+    });
+});
 
 ///////////////////////////////////////////////////////////////////////////////////////
 
