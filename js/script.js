@@ -32,9 +32,27 @@ document.getElementById("age-submit").addEventListener("click", function (event)
 ///////////////////////////////////////////////////////////////////////////////////////
 
 //Background API handler
-function getBG() {
-    const url = "https://php-noise.com/noise.php?r=${r}&g=${g}&b=${b}&tiles=${tiles}&tileSize=${tileSize}&borderWidth=${borderWidth}&json";
+function getRandomBG() {
+    console.log("random BG");
+    let randomR = Math.floor(Math.random() * 100) + 155;
+    let randomG = Math.floor(Math.random() * 100) + 155;
+    let randomB = Math.floor(Math.random() * 100) + 155;
+    const url = "https://php-noise.com/noise.php?r=" + randomR + "&g=" + randomG + "&b=" + randomB + "&tiles=${tiles}&tileSize=20&borderWidth=10&json";
     fetch(url).then(function(response) {
-        
+        return response.json();
+    }).then(function(json) {
+        console.log(json);
+        document.body.style.backgroundImage = "url('" + json.uri + "')";
+    })
+}
+
+function indexBG() {
+    console.log("changing bg");
+    const url = "https://php-noise.com/noise.php?r=237&g=209&b=255&tiles=${tiles}&tileSize=20&borderWidth=10&json";
+    fetch(url).then(function(response) {
+        return response.json();
+    }).then(function(json) {
+        console.log(json);
+        document.body.style.backgroundImage = "url('" + json.uri + "')";
     })
 }
