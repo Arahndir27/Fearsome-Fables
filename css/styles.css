@@ -145,6 +145,26 @@ body {
     margin-bottom: 25px;
 }
 
-.game-container img {
-    width: 500px;
+input[type=text] {
+    padding: 5px;
+    border: 2px solid rgb(159, 118, 255);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=text]:focus {
+    border-color: #333;
+}
+
+input[type=submit] {
+    padding: 5px 15px;
+    background: rgb(159, 118, 255);
+    border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#age-input {
+    margin: 10px;
 }

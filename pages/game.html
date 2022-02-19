@@ -44,7 +44,7 @@
 
             <div class="page-title">
                 <h1>The Game</h1>
-                <p>Coming soon!!!</p>
+                <p>Uses the agefy.io API</p>
             </div>
 
         </div>
@@ -52,8 +52,15 @@
 
 
         <div class="game-container">
-            <img class="img-fluid" src="/images/game-temp.jpg" alt="Place holder for actual game" />
+            <form class="game-form">
+                <label>Can we guess your age based on your name?</label><br/>
+                <input id="age-input" type="text" placeholder="Enter name here"/><br/>
+                <input id="age-submit" type="submit" value="Submit"/>
+            </form>
+
+            <div class="game-results"></div>
         </div>
+
 
 
         <div class="footer">
