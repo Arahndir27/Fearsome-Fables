@@ -13,3 +13,9 @@ document.getElementById("age-submit").addEventListener("click", function (event)
 ///////////////////////////////////////////////////////////////////////////////////////
 
 //Background API handler
+function getBG() {
+    const url = "https://php-noise.com/noise.php?r=${r}&g=${g}&b=${b}&tiles=${tiles}&tileSize=${tileSize}&borderWidth=${borderWidth}&json";
+    fetch(url).then(function(response) {
+        
+    })
+}
