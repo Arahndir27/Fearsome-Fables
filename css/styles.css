@@ -5,9 +5,12 @@ body {
     height: 100%;
 }
 
-.bg-dark {
+/*.bg-dark {
     background-color: #600da0 !important;
 }
+#this-navbar {
+    background-color: #600da0 !important;
+}*/
 
 .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
     color: rgb(179, 65, 255);
@@ -63,7 +66,7 @@ body {
 }
 
 .footer {
-    background-color: rgb(99, 0, 133);
+    /*background-color: rgb(99, 0, 133);*/
     width: 100%;
     height: auto;
     display: flex;
@@ -74,7 +77,7 @@ body {
 }
 
 .footerItem {
-    color: #aaffaa;
+    color: #ffffff;
     font-size: larger;
     margin-left: 7px;
     margin-right: 7px;

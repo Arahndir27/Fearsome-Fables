@@ -37,13 +37,21 @@ function getRandomBG() {
     let randomR = Math.floor(Math.random() * 100) + 155;
     let randomG = Math.floor(Math.random() * 100) + 155;
     let randomB = Math.floor(Math.random() * 100) + 155;
+    console.log(randomR, " ", randomG, " ", randomB);
     const url = "https://php-noise.com/noise.php?r=" + randomR + "&g=" + randomG + "&b=" + randomB + "&tiles=${tiles}&tileSize=20&borderWidth=10&json";
     fetch(url).then(function(response) {
         return response.json();
     }).then(function(json) {
         console.log(json);
+        //document.getElementById("this-navbar").style.backgroundColor = "rgb(" + randomR + "," + randomG + "," + randomB + ")";
         document.body.style.backgroundImage = "url('" + json.uri + "')";
     })
+    let editCSS = document.createElement('style');
+    let headFootRGB = "rgb(" + (randomR*.7) + "," + (randomG*.7) + "," + (randomB*.7) + ")";
+    editCSS.innerHTML = ".bg-dark {background-color: " + headFootRGB + " !important;}";
+    editCSS.innerHTML += ".footer {background-color: " + headFootRGB + ";}";
+    document.head.appendChild(editCSS);
+    //document.getElementById("footer-java").style.backgroundColor = "rgb(" + (randomR*.7) + "," + (randomG*.7) + "," + (randomB*.7) + ");";
 }
 
 function indexBG() {
@@ -55,4 +63,7 @@ function indexBG() {
         console.log(json);
         document.body.style.backgroundImage = "url('" + json.uri + "')";
     })
+    let editCSS = document.createElement('style');
+    editCSS.innerHTML = ".bg-dark {background-color: #600da0 !important;}";
+    document.head.appendChild(editCSS);
 }
