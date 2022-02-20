@@ -47,7 +47,7 @@ function getRandomBG() {
         document.body.style.backgroundImage = "url('" + json.uri + "')";
     })
     let editCSS = document.createElement('style');
-    let headFootRGB = "rgb(" + (randomR*.7) + "," + (randomG*.7) + "," + (randomB*.7) + ")";
+    let headFootRGB = "rgb(" + (randomR*.4) + "," + (randomG*.4) + "," + (randomB*.4) + ")";
     editCSS.innerHTML = ".bg-dark {background-color: " + headFootRGB + " !important;}";
     editCSS.innerHTML += ".footer {background-color: " + headFootRGB + ";}";
     document.head.appendChild(editCSS);
@@ -65,5 +65,6 @@ function indexBG() {
     })
     let editCSS = document.createElement('style');
     editCSS.innerHTML = ".bg-dark {background-color: #600da0 !important;}";
+    editCSS.innerHTML += ".footer {background-color: #600da0;}";
     document.head.appendChild(editCSS);
 }
